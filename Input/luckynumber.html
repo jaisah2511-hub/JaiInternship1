@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //draw a dice and guess a lucky number.
+        let lucky_number3 = Math.random();
+        console.log("Your lucky number is: " + lucky_number3); //this prints 0 to 1.0 (not including 1.0).
+        let lucky_number1 = Math.floor(lucky_number); //this rounds down the number to the nearest integer. It will print 0 (not including 1.0).
+        console.log("Your lucky number is: " + lucky_number1); //this prints 0 (not including 1.0).
+        let lucky_number2 = Math.floor(lucky_number) + 1; //this converts 0 to 1.0 into 1 to 2 (not including 2). Math.floor() rounds down the number to the nearest integer.
+        console.log("Your lucky number is: " + lucky_number2); //this prints
+        let lucky_number = Math.floor(lucky_number * 6) + 1; //this converts 0 to 1.0 into 1 to 6 (not including 7). Math.floor() rounds down the number to the nearest integer.
+        while(true) {
+           let guess = prompt("Enter your lucky number between 1 to 6: "); //this will take input from user. It will show a dialog box with input field and OK and Cancel buttons. It will return the value entered by user. It will return null if user clicks on Cancel button. It will return empty string if user clicks on OK button without entering any value.
+        if(guess == lucky_number) { //if user enters the lucky number, then it will print "You are lucky!" in console. If user enters any other number, then it will print "You are not lucky!" in console.
+            console.log("You won!"); //this prints "You Won!" in console.
+            break; //this will break the loop if user enters the lucky number. It will exit the loop and continue with the rest of the code.
+        } else {
+            console.log("Better luck next time !"); //this prints "Better luck next time !" in console.
+        }
+    }
+    </script>
+</body>
+</html>

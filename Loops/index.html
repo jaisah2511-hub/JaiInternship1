@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>
+        // Loops in JavaScript
+        // 1. For Loop
+        //Print Numbers from 1 to 10; console.log(1,2,3,----10);
+        for (let i = 1; i <= 10; i++) {
+            console.log("The Value is: ", i);
+        }
+        //Print Numbers from 10 to 1; console.log(1,2,3,----10);
+        for (let i = 10; i >= 1; i--) {
+            console.log("The Value is: ", i);
+        }
+        //For Loop - It has 3 parts - 1. Initialization, 2. Condition, 3. Increment/Decrement
+//body of for loop is executed until the condition is true. Once the condition becomes false, the loop stops executing.
+        // 2. While Loop
+        //condition is checked first, if it is true, then the body of the loop is executed. Once the condition becomes false, the loop stops executing.
+        let count = 1;
+        while (count <= 5) { //1<=5, 2<=5, 3<=5, 4<=5, 5<=5, 6<=5 (false) - loop stops executing.
+            console.log("Hello from While Loop: ", count);
+            count++;
+        }
+        //condition is must to stop the loop, otherwise it will keep executing infinitely. It is called Infinite Loop.
+        /*avoid infinite loop - while(true) {console.log("Hello");} - it will keep printing "Hello" infinitely. */
+
+        // 3. Do-While Loop - Exit Control Loop
+        //body of the loop is executed first, then the condition is checked. If the condition
+        //it will run/execute the body of the loop at least once, even if the condition is false.
+        let k = 7;
+        do {
+            console.log("Hi I am Do-While Loop: ", k);
+            //k++; //HI I aam Do-While Loop: Output.
+        } while (k < 5);
+        //conditions
+        //conditions is used to make decisions. Something is true or false.
+        //if(condition) { //if condition is true, then the body of the if statement is executed. If the condition is false, then the body of the if statement is not executed.
+        //} else { //if condition is false, then the body of the else statement is executed. If the condition is true, then the body of the else statement is not executed.
+        //} used for one condition. If there are multiple conditions, then we can use else if statement.
+        let age = 17;
+        if (age >= 18) {
+            alert("You are eligible to vote."); //alert is a in-built method in JavaScript that is used to display an alert box with a specified message and an OK button. It gives Pop-up message to the user. It is used to display information
+            console.log("You are eligible to vote.");
+        } else {
+            alert("You are not eligible to vote. Please wait until you turn 18.");
+            console.log("You are not eligible to vote.");
+        }
+        //if-else-if statement is used to check multiple conditions. It is used when there are more than two conditions to be checked.
+        let temp = 30;
+        if (temp >= 30) {
+            alert("It is sunny day.");
+        } else if (temp > 25) {
+            alert("It is warm outside.");
+        } else if (temp > 20) {
+            alert("It is good day.");
+        } else {
+            alert("It is cold outside.");
+        }
+        //switch statement is used to check multiple conditions. It is used when there are more than two conditions to be checked. It is used when there are multiple values to be checked for a single variable.
+        //switch(value) { case value1: //code to be executed if value is equal to value1; break; case value2: //code to be executed if value is equal to value2; break; default: //code to be executed if value is not equal to any of the values; }
+        let choice = 2;
+
+switch (choice) {
+
+    case 1:
+        console.log("Biscuit");
+        alert("Biscuit");
+        break;
+
+    case 2:
+        console.log("Water");
+        alert("Water");
+        break;
+
+    case 3:
+        console.log("Chips");
+        alert("Chips");
+        break;
+
+    case 4:
+        console.log("Soda");
+        alert("Soda");
+        break;
+
+    default:
+        console.log("Invalid Choice");
+        alert("Invalid Choice");
+}
+//array help us to store multiple values in a single variable. It is used to store a collection of data. It is used to store a list of items. It is used to store a list of values. It is used to store a list of objects. It is used to store a list of arrays. It is used to store a list of functions. It is used to store a list of strings. It is used to store a list of numbers. It is used to store a list of booleans. It is used to store a list of null values. It is used to store a list of undefined values. It is used to store a list of NaN values. It is used to store a list of Infinity values. It is used to store a list of -Infinity values. It is used to store a list of objects with properties and methods.
+//javascript arrays helps us to store different types of data in a single variable. It is used to store a collection of data. It is used to store a list of items. It is used to store a list of values. It is used to store a list of objects. It is used to store a list of arrays. It is used to store a list of functions. It is used to store a list of strings. It is used to store a list of numbers. It is used to store a list of booleans. It is used to store a list of null values. It is used to store a list of undefined values. It is used to store a list of NaN values. It is used to store a list of Infinity values. It is used to store a list of -Infinity values. It is used to store a list of objects with properties and methods.
+//symbol - [].
+//Rule:- Index Number Starts at 0. First Element is at Index 0, Second Element is at Index 1, Third Element is at Index 2, and so on.
+        let fruits = ["Apple", "Banana", "Mango", "Orange", "Grapes", 123, true, null, undefined, NaN, Infinity, -Infinity, { name: "Ayush", age: 20 }, [1, 2, 3], function () { console.log("Hello from Function"); }];
+        console.log(fruits);
+        //access data - arrayname(indexnumber) - fruits[0] - Apple, fruits[1] - Banana, fruits[2] - Mango, fruits[3] - Orange, fruits[4] - Grapes, fruits[5] - 123, fruits[6] - true, fruits[7] - null, fruits[8] - undefined, fruits[9] - NaN, fruits[10] - Infinity, fruits[11] - -Infinity, fruits[12] - { name: "Ayush", age: 20 }, fruits[13] - [1, 2, 3], fruits[14] - function () { console.log("Hello from Function"); }
+        console.log(fruits[0]); //Apple
+        console.log(fruits[1]); //Banana
+        console.log(fruits[2]); //Mango
+        console.log(fruits[16]); //undefined - because there is no element at index 16. The last element is at index 15.
+        console.log(fruits[12]); //{ name: "Ayush", age: 20 } - object
+        console.log(fruits[13]); //[1, 2, 3] - array
+        console.log(fruits[14]); //function () { console.log("Hello from Function"); } - function
+        console.log(fruits[14]()); //Hello from Function - function is executed and it returns undefined because there is no return statement in the function.
+        console.log(fruits[12].name); //Ayush - object property
+        console.log(fruits[12].age); //20 - object property
+        console.log(fruits[6]); //true
+        //Add the Data. Push() - add the data at the end of the array. Pop() - remove the data from the end of the array. Unshift() - add the data at the beginning of the array. Shift() - remove the data from the beginning of the array.
+        fruits.push("Pineapple"); //add the data at the end of the array.
+        console.log(fruits);
+        fruits.unshift("Strawberry"); //add the data at the beginning of the array.
+        console.log(fruits);
+        //Remove the Data
+        fruits.pop(); //remove the data from the end of the array.
+        console.log(fruits);
+        fruits.shift(); //remove the data from the beginning/front of the array.
+        console.log(fruits);
+        //splice() - add/remove the data at any position of the array. It takes 3 parameters - 1. index number, 2. number of elements to be removed, 3. elements to be added.
+        fruits.splice(5, 0, "Pineapple"); //add the data at index 5 of the array. It will not remove any element from the array.
+        console.log(fruits);
+        //splice(index number, 0 - number of elements to be removed, elements to be added) - add the data at index 2 of the array. It will not remove any element from the array. 1 means remove 1 element from the array. 2 means remove 2 elements from the array. 3 means remove 3 elements from the array. and so on.
+        //0 means add new data without removing the previous data.
+        //1 means add the data and remove the previous data.
+        fruits.splice(6, 1, 245); //add the data at index 6 of the array. It will remove 1 element from the array.
+        console.log(fruits);
+        //Object - It is a collection of key-value pairs. It is used to store data in a structured way. It is used to store data in a way that is easy to access and manipulate. It is used to store data in a way that is easy to read and understand. It is used to store data in a way that is easy to maintain and update. It is used to store data in a way that is easy to share and collaborate. It is used to store data in a way that is easy to visualize and analyze. It is used to store data in a way that is easy to search and filter. It is used to store data in a way that is easy to sort and group. It is used to store data in a way that is easy to validate and verify. It is used to store data in a way that is easy to secure and protect. It is used to store data in a way that is easy to backup and restore. It is used to store data in a way that is easy to migrate and integrate. It is used to store data in a way that is easy to scale and optimize.
+        //Object - Collection of Data. Symbol - {}; key (left side) - value (right side). key-value pair. key is also called property. value is also called value
+        let person = {
+            name: "Ayush",
+            age: 20,
+            email: "ayush@example.com",
+            salary: 50000,
+            isMarried: false,
+            department: "IT",
+            "Login Status": true,
+            address: {
+                city: "New York",
+                state: "NY",
+                country: "USA"
+            },
+        };
+        console.log(person);
+        //acess the data - objectname.keyname - person.name - Ayush, person.age - 20, person.email - ayush@example.com
+        console.log(person.name); //Ayush
+        console.log(person.age); //20
+        console.log(person.email); //ayush@example.com
+        console.log(person.address.city); //New York
+        console.log(person.address.state); //NY
+        console.log(person.address.country); //USA
+        console.log(person.department); //IT
+        console.log(person["Login Status"]); //true
+        //functions - it is a block of code that is used to perform a specific task. It is used to group a set of statements together to perform
+        //function functionName(parameters) { //code to be executed- instruction/task; } - function is a block of code that is used to perform a specific task. It is used to group a set of statements together to perform a specific task. It is used to avoid code duplication and to make the code more readable and maintainable. It is used to make the code more modular and reusable. It is used to make the code more organized and structured. It is used to make the code more efficient and optimized. It is used to make the code more flexible and adaptable. It is used to make the code more testable and debuggable. It is used to make the code more scalable and extensible. It is used to make the code more secure and robust. It is used to make the code more user-friendly and intuitive. It is used to make the code more interactive and dynamic. It is used to make the code more responsive and adaptive. It is used to make the code more compatible and interoperable. It is used to make the code more portable and platform-independent. It is used to make the code more maintainable and upgradable.
+        function greet() {
+            alert("Hello from Function");
+        }
+        greet(); //function is called/invoked/executed. It will execute the code inside the function.
+        function add(a, b) {
+            return a + b; //return statement is used to return a value from the function. It is used to return a value from the function to the caller. It is used to return a value from the function to the calling code. It is used to return a value from the function to the calling function. It is used to return a value from the function to the calling method. It is used to return a value from the function to the calling object. It is used to return a value from the function to the calling class. It is used to return a value from the function to the calling module. It is used to return a value from the function to the calling package. It is used to return a value from the function to the calling namespace. It is used to return a value from the function to the calling scope. It is used to return a value from the function to the calling context. It is used to return a value from the function to the calling environment. It is used to return a value from the function to the calling framework. It is used to return a value from the function to the calling library. It is used to return a value from the function to the calling API. It is used to return a value from the function to the calling service. It is used to return a value from the function to the calling endpoint.
+        } //function with parameters - a and b are parameters. They are used to pass values to the function. They are used to make the function more flexible and reusable. They are used to make the function more modular and organized. They are used to make the function more efficient and optimized. They are used to make the function more user-friendly and intuitive. They are used to make the function more interactive and dynamic. They are used to make the function more responsive and adaptive. They are used to make the function more compatible and interoperable. They are used to make the function more portable and platform-independent. They are used to make the function more maintainable and upgradable.
+        let result = add(5, 10); //function is called/invoked/ex
+//ecuted. It will execute the code inside the function. 5 and 10 are arguments. They are used to pass values to the function. They are used to make the function more flexible and reusable. They are used to make the function more modular and organized. They are used to make the function more efficient and optimized. They are used to make the function more user-friendly and intuitive. They are used to make the function more interactive and dynamic. They are used to make the function more responsive and adaptive. They are used to make the function more compatible and interoperable. They are used to make the function more portable and platform-independent. They are used to make the function more maintainable and upgradable.
+        console.log(result); //15 - output of the function. It is the value returned by
+        function greet(name) { //function with parameter - name is parameter. It is used to pass value to the function. It is used to make the function more flexible and reusable. It is used to make the function more modular and organized. It is used to make the function more efficient and optimized. It is used to make the function more user-friendly and intuitive. It is used to make the function more interactive and dynamic. It is used to make the function more responsive and adaptive. It is used to make the function more compatible and interoperable. It is used to make the function more portable and platform-independent. It is used to make the function more maintainable and upgradable.
+            console.log("Welcome to my Website, ", name);
+        }
+        greet("Ayush"); //function is called/invoked/executed. It will execute the code inside the function.
+        function greet(name, status) { //function with parameter - name is parameter. It is used to pass value to the function. It is used to make the function more flexible and reusable. It is used to make the function more modular and organized. It is used to make the function more efficient and optimized. It is used to make the function more user-friendly and intuitive. It is used to make the function more interactive and dynamic. It is used to make the function more responsive and adaptive. It is used to make the function more compatible and interoperable. It is used to make the function more portable and platform-independent. It is used to make the function more maintainable and upgradable.
+            console.log("Welcome to my Website, ", name);
+            console.log("Your Status is, ", status);
+        } //function with multiple parameters - name and status are parameters. They are used to pass values to the function. They are used to make the function more flexible and reusable. They are used to make the function more modular and organized. They are used to make the function more efficient and optimized. They are used to make the function more user-friendly and intuitive. They are used to make the function more interactive and dynamic. They are used to make the function more responsive and adaptive. They are used to make the function more compatible and interoperable. They are used to make the function more portable and platform-independent. They are used to make the function more maintainable and upgradable.
+        greet("Ayush", "online"); //function is called/invoked/executed. It will execute the code inside the function.
+        //very important for interview - Data Types in JavaScript - 1. String, 2. Number, 3. Boolean, 4. Undefined, 5. Null, 6. Object, 7. Symbol, 8. BigInt
+        //very important for DSA.
+    </script>
+</body>
+</html>
