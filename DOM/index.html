@@ -1,0 +1,115 @@
+//dom - it helps us to connect html + css + javascript together.
+//dom - document (webpage) object model - it is a programming interface for html and xml documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects. That way, programming languages can connect to the page. The DOM is not part of the JavaScript language, but it is accessible through JavaScript. The DOM is a standard object model and programming interface for HTML. It defines the logical structure of documents and the way a document is accessed and manipulated. The W3C DOM standard is separated into 3 different parts: Core DOM, XML DOM, HTML DOM.
+//dom - it heps connect html tags in javascript. It is used to access and manipulate the elements of a webpage. It is used to change the content, style, and structure of a webpage. It is used to create new elements and remove existing elements from a webpage. It is used to handle events and user interactions on a webpage. It is used to validate form inputs and provide feedback to users. It is used to create dynamic and interactive web applications. It is used to enhance the user experience and improve the usability of a webpage. It is used to implement responsive design and adapt the layout of a webpage to different screen sizes and devices. It is used to optimize the performance and speed of a webpage. It is used to ensure cross-browser compatibility and consistent behavior across different web browsers. It is used to implement accessibility features and make a webpage usable for people with disabilities. It is used to integrate third-party libraries and frameworks into a webpage. It is used to implement client-side scripting and reduce server load. It is used to create single-page applications (SPAs) that provide a seamless user experience without page reloads.
+//dom - helps us to connect html with javascript.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    background-color: white;
+    color: black;
+    text-align: center;
+    }
+.dark {
+    background-color: black;
+    color: white;
+}
+    </style>
+</head>
+//ClasslIst - will help us add tag to any class.
+//we use event concept which is better (How?).
+<body id = "body">
+    <h1> Theme Toggle </h1>
+    <button id = "btn1" onclick="changeTheme()"> Dark Mode</button>
+    <button id="btn">Click Me</button>
+    <!--dom - helps us to connect html with javascript-->
+    <p id="myp">Hello Javascript</p>
+    //multiple tags can have same class name. (very important concept for interview). It is used to group elements together and apply styles or behaviors to them collectively. It allows for easier manipulation and targeting of multiple elements in the DOM. It is commonly used in CSS and JavaScript to select and modify elements based on their class name. It provides a way to organize and categorize elements in a webpage, making it easier to manage and maintain the code. It enables developers to create reusable styles and functionality for elements that share the same class name. It allows for efficient selection and manipulation of multiple elements without the need for individual IDs or unique identifiers. It promotes code reusability and modularity by allowing developers to apply the same styles or behaviors to multiple elements with a shared class name.
+    <div class="myc">This is a div Shopping - 0.</div>
+    <div class="myc">This is a div Gaming - 1.</div>
+    <div class="myc">This is a div Dancing - 2.</div>
+    <p> Hello, Good Morning! </p>
+    <p> Hello, Good Afternoon! </p>
+    <div class = "xyz">Amazon - Ecommerce</div>
+    <div class = "xyz">Netflix - OTT Platform</div>
+    //DOM Manipulation
+    //create Element(tagNamw).
+    <div id = "container">
+
+    </div>
+    <ul id = "myList">
+
+    </ul>
+    <script>
+        //Select HTML Tag by Selecting Methods.
+        //1. id - getElementById() - it is used to select an element by its id attribute. It returns the first element with the specified id. It is case-sensitive. It is a method of the document object. It is a part of the DOM API. It is supported in all modern browsers. It is widely used in web development. It is a fast and efficient way to access elements in the DOM. It is commonly used for manipulating and updating the content of a webpage dynamically.
+        //2. class - getElementsByClassName() - it is used to select/get elements by class classNmae
+        //3. tag - getElementsByTagName("TagName") - it is used to select elements by their tag name. It returns a live HTMLCollection of elements with the specified tag name. It is case-insensitive for HTML documents and case-sensitive for XML documents. It is a method of the document object. It is a part of the DOM API. It is supported in all modern browsers. It is widely used in web development. It is a fast and efficient way to access elements in the DOM. It is commonly used for manipulating and updating the content of a webpage dynamically.
+        //4. querySelector() - it is used to select the first element that matches a specified CSS selector. It returns the first matching element or null if no matches are found. It is case-sensitive for HTML documents and case-sensitive for XML documents. It is a method of the document object. It is a part of the DOM API. It is supported in all modern browsers. It is widely used in web development. It is a fast and efficient way to access elements in the DOM. It is commonly used for manipulating and updating the content of a webpage dynamically. It follows the CSS Selector Rule.
+        //query slector - #id - #idname, .class - .classname, tag - tagname, attribute - [attribute=value], pseudo-class - :pseudo-class, pseudo-element - ::pseudo-element, combinator - selector1 selector2, selector1 > selector2, selector1 + selector2, selector1 ~ selector2.
+        //5. querySelectorAll() - it is used to select all elements that match a specified CSS selector. It returns a static NodeList of all matching elements or an empty NodeList if no matches are found. It is case-sensitive for HTML documents and case-sensitive for XML documents. It is a method of the document object. It is a part of the DOM API. It is supported in all modern browsers. It is widely used in web development. It is a fast and efficient way to access elements in the DOM. It is commonly used for manipulating and updating the content of a webpage dynamically.
+        //6. getAttribute() - it is used to get the value of a specified attribute on the selected element. It returns the value of the attribute as a string or null if the attribute does not exist. It is case-sensitive for HTML documents and case-sensitive for XML documents. It is a method of the Element object. It is a part of the DOM API. It is supported in all modern browsers. It is widely used in web development. It is a fast and efficient way to access attributes of elements in the DOM. It is commonly used for manipulating and updating the content of a webpage dynamically.
+        // Access the paragraph element by its ID
+        //from webpage.
+        let paragraph = document.getElementById("myp"); //selected the tag with id-name in JS.
+        console.log(paragraph); //this will print the paragraph element in console.
+        // Access the button element by its ID
+        //var not used in modern JS because it is not block-scoped. It is function-scoped. It is hoisted to the top of the function. It can be re-declared and updated. It can be used before it is declared. It can be used in global scope and local scope. It can be used in strict mode and non-strict mode. It can be used in ES5 and ES6. It can be used in browser and Node.js. It can be used in synchronous and asynchronous code. It can be used in callback functions and promises. It can be used in event listeners and timers. It can be used in loops and conditionals. It can be used in functions and classes. It can be used in modules and scripts. It can be used in JSON and XML. It can be used in HTML and CSS.
+        //use usually let or const instead of var because they are block-scoped. They are not hoisted to the top of the block. They cannot be re-declared and updated. They cannot be used before they are declared. They can be used in global scope and local scope. They can be used in strict mode and non-strict mode. They can be used in ES5 and ES6. They can be used in browser and Node.js. They can be used in synchronous and asynchronous code. They can be used in callback functions and promises. They can be used in event listeners and timers. They can be used in loops and conditionals. They can be used in functions and classes. They can be used in modules and scripts. They can be used in JSON and XML. They can be used in HTML and CSS.
+//var - due to reinitialization. (---) (---,+3,+3).
+        const button = document.getElementById("btn"); //selected the tag with id-name in JS.
+        console.log(button); //this will print the button element in console.
+        //const beacuse it is necessary to store sensitive data in const. It is a good practice to use const for variables that should not be reassigned. It helps prevent accidental changes to the variable's value and improves code readability and maintainability.
+        // Add a click event listener to the button
+        //.textContent - it is used to get or set the text content of an element (content of tag). It returns the text content of the element and its descendants. It can be used to change the text displayed in an element dynamically. It is a property of the Element object in the DOM API. It is supported in all modern browsers. It is widely used in web development for manipulating and updating the content of a webpage dynamically.
+        console.log(paragraph.textContent); //this will print the text content of the paragraph element in console.
+        console.log(button.textContent); //this will print the text content of the button element in console.
+        const ele2 = document.getElementsByClassName("myc"); //selected the tag with class-name in JS. It will return an HTMLCollection of elements with the specified class name. It is a live collection, meaning it updates automatically when elements are added or removed from the DOM. It is a method of the document object and is part of the DOM API. It is supported in all modern browsers and is widely used in web development for manipulating and updating the content of a webpage dynamically.
+        console.log(ele2); //this will print the HTMLCollection of elements with the class name; it is not a variable - it is an Array.
+        console.log(ele2[1]); //this will print the second element in the HTMLCollection.
+        console.log(ele2[1].textContent); //this will print the text content of the second element in the HTMLCollection.
+        const ele3 = document.getElementsByTagName("p"); //selected the tag with tag-name in JS. It will return an HTMLCollection of elements with the specified tag name. It is a live collection, meaning it updates automatically when elements are added or removed from the DOM. It is a method of the document object and is part of the DOM API. It is supported in all modern browsers and is widely used in web development for manipulating and updating the content of a webpage dynamically.
+        console.log(ele3); //this will print the HTMLCollection of elements with the tag name; it is not a variable - it is an Array. (all 3 p tags will be printed in console).
+        console.log(ele3[1]); //this will print the second element in the HTMLCollection
+        console.log(ele3[1].textContent); //this will print the text content of the second element in the HTMLCollection.
+        //we don't use getElementsByClassName() and getElementsByTagName() because they are not flexible. We use querySelector() and querySelectorAll() because they are flexible.
+        //we don't use getElementbyTagName() beacuse we have remember all the tag names. We use querySelector() and querySelectorAll() because we can use any CSS selector.
+        const ele4 = document.querySelector(".xyz"); //selected the tag with class-name in JS. It will return the first element that matches the specified CSS selector. It is a static NodeList, meaning it does not update automatically when elements are added or removed from the DOM. It is a method of the document object and is part of the DOM API. It is supported in all modern browsers and is widely used in web development for manipulating and updating the content of a webpage dynamically.
+        console.log(ele4); //it will only select the first element/tag.
+        const ele5 = document.querySelectorAll(".xyz");
+        console.log(ele5); //query selector will select all the div containers.
+        button.addEventListener("click", function() { //this will add a click event listener to the button element. When the button is clicked, the function inside the event listener will be executed. It is a way to handle user interactions and trigger specific actions in response to events on a webpage.
+            // Change the content of the paragraph when the button is clicked
+            paragraph.innerHTML = "Button Clicked!"; //this will change the content of the paragraph element to "Button Clicked!" when the button is clicked. It updates the inner HTML of the paragraph element, replacing its previous content with the new text.
+        });
+        // Change the content of the paragraph
+        paragraph.innerHTML = "Hello, DOM!";
+        //it helps us select all tags in html - like body tag, div tag, span tag, etc.
+        //create Element(tagNamw).
+        const para = document.createElement("p")
+        //Add Text
+        para.innerText = "Hi, I am created using Javascript!" //works same as textContent
+        document.getElementById("container").appendChild(para) //para is a child tag
+
+        const li = document.createElement("li")
+        li.innerText = "Apple"
+        document.getElementById("myList").appendChild(li)
+        function changeTheme() {
+            //selecting only those tags where chnages are required.
+            const body = document.getElementById("body");
+            const btn1 = document.getElementById("btn1");
+            body.classList.toggle("dark") //adding class.
+            if(body.classList.contains("dark")) {
+                btn1.textContent = "Light Mode";
+        }
+        else {
+            btn1.textContent = "Dark Mode";
+        }
+    }
+    </script>
+</body>
+</html>

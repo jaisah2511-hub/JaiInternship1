@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    //very important - if we know this 90% of the work is done.
+    <p id = "text"> Hi Everyone</p>
+    <button id = "btn"> Login </button>
+    //before logging - log in, after that - log out.
+    //1. Update the Text Content ---, --- + 3*3
+    <div id="MyDiv"> This is Div </div>
+    <p id = "newp">This is Old para</p>
+    <script>
+        //Slect the HTML Element/Tag
+        const ele1 = document.getElementById("text");
+        //always use const - as using other can cause abrupt chnages (paragrpah to div and other tags).
+        //it is safer to use for html tags. //why not let?
+        ele1.textContent = "Hello Everyone!!! Welcome to DOM Magic"; 
+        console.log(ele1);
+        const button = document.getElementById("btn");
+        button.textContent = "Logout";
+        console.log(button);
+        const div = document.getElementById("mydiv");
+        console.log(div);
+        //div to heading tag.
+        //div.innerHTML = "<h1> This is My Heading </h1>";
+        //2.innerhtml - can change the textContent and also update the tag (div to h1.etc.)
+        //innerhtml - it can help us to change and update the (content of tag)div container/tag to another other tag.
+        //can we add id or classname?
+        div.innerHTML = `
+        <p id = "myp"> Heelo this <mark> Updated </mark> </p>
+        <button> Smile </button>
+        <em> Happy Week </em>
+        `
+        //one tag got updated with multiple html tags.
+        //3. we can also change the css styling.
+        const ele2 = document.getElementById("newp");
+        // .style.PropertyName;
+        ele2.style.color = "red"
+        ele2.style.backgroundColor = "black"
+        ele2.style.textAlign = "center"
+        ele2.textContent = "Let's Take a Short Break"
+        //4. Creating Tag by Yourself using Javascript
+        //5. How to Change the Theme of Webpage (Light, Black Background).
+    </script>
+</body>
+</html>
