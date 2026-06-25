@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <image id = "cat"></image>
+    <script>
+    //dom - connects javascript and html; javascript - manipulation.
+    //fetch("https://api.thecatapi.com/v1/images/search")
+    const CatImage = document.getElementById("cat")
+    fetch("https://api.thecatapi.com/v1/images/search")
+    .then(res => res.json())
+    .then(data => {
+        console.log(data[0].url)
+        CatImage.src = data[0].url
+    })
+    .catch(err => console.log("Error Occurred ", err))
+    </script>
+</body>
+</html>

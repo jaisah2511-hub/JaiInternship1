@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Callback - To Achieve Synchronous Programming - Multiple Taska at Same Time
+        //callback (remmeber this) - callback is a function and callback is passed as a parameter (inside) into other function.
+        function DoHomework(subject, callback) {
+            console.log("Doing Homework for ", subject)
+            callback("GoodMorning", function(){
+                console.log("Second Callback function")
+            }) //calling the callback function.
+        }
+        DoHomework("Maths", function(a, callback) {
+            console.log("Homework Done, Now Going Out", a);
+            callback()
+        })
+        //callback - problem for many functions.
+    </script>
+</body>
+</html>

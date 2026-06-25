@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //https://randomuser.me/api
+        //fetch("api address") fetch Data from API
+        //convert the data into json format
+        fetch("https://randomuser.me/api")
+        //successful -.then()
+        //.then(response => console.log(response))
+        .then(response => response.json())
+            .then(data => console.log(data.results)) //.data for everything
+        //error - .catch()
+        .catch(error => console.log("Error Conncetion ", error))
+        //error acts as variable that stores error and then, we print it in console.
+    </script>
+</body>
+</html>
